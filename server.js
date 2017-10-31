@@ -1,7 +1,7 @@
 var restify = require('restify');
 var fs = require('fs');
 var cheerio = require('cheerio')
-let recipeparser = require('./src/recipe-parser');
+let recipeparser = require('./index');
 let request = require('request')
 
 var server = restify.createServer();
@@ -14,7 +14,7 @@ server.get('/', function(req, res, next) {
       <body>
       <form action="/scrape" method="POST">
         <label>URL:</label>
-        <input type="text" name="url" />
+        <input type="text" name="url" value="http://www.skinnytaste.com/air-fryer-french-fries/"/>
       </form>
       </body>
     </html>`;
