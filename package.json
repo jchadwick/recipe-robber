@@ -1,0 +1,31 @@
+{
+  "name": "recipe-robber",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "mocha",
+    "coverage": "nyc mocha",
+    "watch": "mocha --watch",
+    "dev": "parallelshell \"npm run watch\" \"npm start\" \"npm run open\"",
+    "open": "opn http://localhost:5000/test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "fetch": "^1.1.0",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1",
+    "nyc": "^11.2.1",
+    "opn-cli": "^3.1.0",
+    "parallelshell": "^3.0.2",
+    "restify": "^6.2.3",
+    "yarn": "^1.2.1"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "recipe-ingredient-parser": "^1.5.3",
+    "request": "^2.83.0",
+    "web-auto-extractor": "^1.0.17"
+  }
+}
